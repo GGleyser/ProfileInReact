@@ -1,7 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
+import Mountain from './img/mountain.jpeg';
 import './App.css';
+
 import Nav from './componentes/menu/nav';
+import Carousel from './componentes/carousel';
+import Icons from './componentes/icons';
+import Sobre from './componentes/sobre';
+import Card from './componentes/card';
+import Footer from './componentes/footer';
+
 import { render } from '@testing-library/react';
 
 function pp() {
@@ -27,16 +35,50 @@ function pp() {
 
 export default function App()
 {
+  // let bla = [Mountain, logo];
   return(
     <div className="App">
       <header>
         <Nav />
       </header>
 
-      
-      <div className="bg-dark">
-        <img src={logo} width="400" height="400"></img>
+      <Carousel imgs={Mountain} active="0" />
+
+
+      <Sobre />
+
+
+      {/* portfolio */}
+      <div className="portfolio bg-success pt-5">
+        <div className="container">
+          <h2 className="pb-5">Portfólio</h2>
+
+          {/* cards */}
+          <div className="row">
+
+            <Card 
+              img={Mountain} btnTxt="acessar" btnLink="#test" title="Projeto" 
+              text="Projeto sobre algo, que criei quando eu estava trabalhando com algo."
+            />
+            <Card
+              img={Mountain} btnTxt="acessar" btnLink="#test" title="Projeto"
+              text="Projeto sobre algo, que criei quando eu estava trabalhando com algo."
+            />
+            <Card
+              img={Mountain} btnTxt="acessar" btnLink="#test" title="Projeto"
+              text="Projeto sobre algo, que criei quando eu estava trabalhando com algo."
+            />
+
+          </div>
+          {/* cards */}
+
+          <div className="row p-5">
+            <a className="btn btn-dark m-auto" href="#projetos/">Ver todos</a>
+          </div>
+
+        </div>
       </div>
+      {/* portfolio */}
 
       <div className="container">
         <div className="row">
@@ -68,14 +110,8 @@ export default function App()
         </article>
       </div>
       
-      <footer>
-        <div className="container">
-          <div className="row p-3">
-            <span className="size-3">GGleyser 2020, todos os direitos reservados</span>
-            <span>face insta, tweeter</span>
-          </div>
-        </div>
-      </footer>
+      <Footer /> 
+
     </div>
   )
 }
