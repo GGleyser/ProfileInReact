@@ -1,24 +1,25 @@
 import React from 'react';
 import Icons from './icons';
-import Mountain from './../img/mountain.jpeg';
+import g2 from './../img/eu.jpeg';
 
 export default function Sobre()
 {
     return(
-    <div className="sobre container p-5">
-        <div className="row">
+    <div className="sobre container py-5" id="sobre">
+        <div className="row my-5">
 
-            <div className="col">
-                <img className="w-100" src={Mountain}></img>
+            <div className="col-12 col-md-4">
+                <img className="rounded-circle img-thumbnail perfil" src={g2}></img>
             </div>
 
             <article className="col col-md-8">
                 <h2 className="sobre_titulo text-left"><strong>Sobre</strong></h2>
-                <p className="sobre_texto text-left">
-                    It was popularised in the 1960s with the release of Letraset sheets
-                    containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
-                    including versions of Lorem Ipsum.
-            </p>
+                    <p className="sobre_texto text-left my-3">
+                    Gabriel Gleyser Análista Desenvolvedor de Sistemas, 5 anos de experiência em fazer os bagulhos funcionarem 
+                    e desbugando sistemas;
+                    Já desenvolvi sites, jogos pra pc e um monte de poha que não coloquei no meu portfólio, esse sou eu. 
+                    Organização é minha maior qualidade.  
+                    </p>
                 <Icons class="sobre_icones text-left" />
             </article>
         </div>
