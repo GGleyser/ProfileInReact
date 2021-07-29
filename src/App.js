@@ -6,68 +6,35 @@ import './App.css';
 import Nav from './componentes/menu/nav';
 import Portfolio from './componentes/portfolio';
 import Sobre from './componentes/sobre';
+import Info from './componentes/info';
 import Footer from './componentes/footer';
-import Depoimento from './componentes/depoimento';
+import Video from './../src/video/video.mp4';
+import Carousel from './componentes/carousel';
 import Orcamento from './componentes/orcamento';
 import { render } from '@testing-library/react';
 
 
-// const Titulo = (props)=>
-// {
-//   return(
-//     <h1 className={props.stl}>
-//       <strong>{props.txt}</strong>
-//     </h1>
-//     );
-// };
-
-
-function pp() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
 
 export default function App()
 {
-  // let bla = [Mountain, logo];
   return(
     <div className="App">
       <div>
         <Nav />
       </div>
 
-      {/* <MyCarousel height={400} 
-      caption=
-      {
-        ["bla", "ble", "bli"]
-      } 
-        img={WEBDEV} active="0" /> */}
+      <div style={{height: "500px"}}></div>
+      
+      <video className="w-100" src={Video} autoPlay="true" loop="true" muted="true" style={{zIndex: "-1", position: "fixed", top: "0", left: "0"}}></video>
+
+      <Info />
 
       <Sobre />
 
-
       <Portfolio />
 
-
-      <Depoimento img={Mina} txt="Ótimo profissional, muito prestativo e atencioso. Fez exatamente o que eu imaginava"/>
-
+      <Carousel caption={["bla", "blew", "blum"]} img={Mina}/>
+     
       <Orcamento />
 
       <Footer /> 

@@ -5,7 +5,7 @@ import g2 from './../img/eu.jpeg';
 export default function Sobre()
 {
     return(
-    <div className="sobre container py-5" id="sobre">
+    <div className="sobre container" id="sobre">
         <div className="row my-5">
 
             <div className="col-12 col-md-4">

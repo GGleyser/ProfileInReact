@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
+
 
 export default function Nav()
 {
+    const [Aactive, setstate] = useState("inicio")
     return(
         <nav className="navbar navbar-expand-lg navbar-light py-3" style={{ backgroundColor: "rgb(218 218 218)"}}>
             <div className="container">
@@ -15,17 +17,21 @@ export default function Nav()
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ml-auto">
-                        <li className="nav-item active" >
-                            <a className="nav-link h5" href="#inicio">Inicio</a>
+                        <li className="nav-item active">
+                            <a className="nav-link btn h5" style={(Aactive == "inicio") ? {backgroundColor: "#000", color: "#fff"} : {} } 
+                            onClick={()=>{setstate("inicio")}} href="#inicio">Inicio</a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link h5" href="#sobre">Sobre</a>
+                        <li className="nav-item active">
+                            <a className="nav-link btn h5" style={(Aactive == "sobre") ? {backgroundColor: "#000", color: "#fff"} : {} } 
+                            onClick={()=>{setstate("sobre")}} href="#sobre">Sobre</a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link btn h5" style={{backgroundColor: "#000", color: "#fff"}} href="#orcamento">Orçamento</a>
+                        <li className="nav-item active">
+                            <a className="nav-link btn h5" style={(Aactive == "orcamento") ? {backgroundColor: "#000", color: "#fff"} : {} } 
+                            onClick={()=>{setstate("orcamento")}} href="#orcamento">Orçamento</a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link h5" href="#contato">Contato</a>
+                        <li className="nav-item active">
+                            <a className="nav-link btn h5" style={(Aactive == "contato") ? {backgroundColor: "#000", color: "#fff"} : {} } 
+                            onClick={()=>{setstate("contato")}} href="#contato">Contato</a>
                         </li>
                     </ul>
                 </div>
