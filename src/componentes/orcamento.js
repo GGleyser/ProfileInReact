@@ -8,16 +8,19 @@ export default function Orcamento(props) {
                     <div className="text-white col-12 col-md-8">
                         <h4 className="text-left">Faça um orçamento agora mesmo!</h4>
                         <p className="text-left py-3">
-                            Nam eu ligula ut sapien sodales interdum vel sit amet urna.
-                            Nam lectus eros, malesuada a efficitur id, condimentum ut magna.
-              </p>
+                            Orçamento sem compromisso, serviço com excelência e garantia.
+                        </p>
                     </div>
 
                     <div className="col text-right align-self-center">
-                        <a className="btn btn-light w-100" href="#orcamento"><strong className="h4">Fazer orçamento</strong></a>
+                        <a className="btn btn-light w-100" href="#orcamento" onClick={()=> {alert("orc")} } ><strong className="h4">Fazer orçamento</strong></a>
                     </div>
                 </div>
             </article>
+
+            <form className="">
+                <button className="submit btn text-white">Enviar</button>
+            </form>
         </div>
     );
 }

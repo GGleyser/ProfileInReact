@@ -4,20 +4,20 @@ import Card from './card';
 export default function Info()
 {
     return(
-        <div className="" style={{backgroundColor: "rgb(218, 218, 218)"}}>
-            <div className="my-5 py-5">
+        <div className="">
+            <div className="">
                 
-                <div className="mt-5">
-                    <div className="text-center pb-3 h5">
-                        Análista de Sistemas, Desenvolvedor com 3 anos de experiência; 
+                <div className="py-5" style={{ paddingTop: "50px", background: "linear-gradient(180deg, black, transparent)" }}>
+                    <div className="text-center p-2 py-5 h5 text-white">
+                        Gabriel Gleyser Análista Desenvolvedor de Sistemas, 3 anos de experiência em desenvolvimento web. 
                     </div>
                   
-                        <p className="text-center py-3 h4">
+                        <p className="text-center py-5 h4 text-white">
                             Habilidades:
                         </p>
                     <div className="d-flex flex-wrap justify-content-center">
                         <div className="p-2 m-1 d-flex" style={{width: "150px"}}>
-                            <ul className="p-2 w-100" style={{backgroundColor: "white"}}>
+                            <ul className="p-2 w-100 rounded" style={{backgroundColor: "white"}}>
                                 <h6>Organização</h6>
                                 <li className="" style={{listStyle: "none"}}>Gestão de projetos</li>
                                 <li className="" style={{listStyle: "none"}}>UML</li>
@@ -25,7 +25,7 @@ export default function Info()
                             </ul>      
                         </div>
                          <div className="p-2 m-1 d-flex" style={{width: "150px"}}>
-                            <ul className="p-2 w-100" style={{backgroundColor: "white"}}>
+                            <ul className="p-2 w-100 rounded" style={{backgroundColor: "white"}}>
                                 <h6>PHP</h6>
                                 <li className="" style={{listStyle: "none"}}>Laravel</li>
                                 <li className="" style={{listStyle: "none"}}>Wordpress</li>
@@ -33,7 +33,7 @@ export default function Info()
                             </ul>  
                          </div>
                         <div className="p-2 m-1 d-flex" style={{width: "150px"}}>
-                            <ul className="p-2 w-100" style={{backgroundColor: "white"}}>
+                            <ul className="p-2 w-100 rounded" style={{backgroundColor: "white"}}>
                                 <h6>JS</h6>
                                 <li className="" style={{listStyle: "none"}}>Jquery</li>
                                 <li className="" style={{listStyle: "none"}}>Ajax</li>
@@ -41,7 +41,7 @@ export default function Info()
                             </ul>   
                         </div>
                         <div className="p-2 m-1 d-flex" style={{width: "150px"}}>
-                            <ul className="p-2 w-100" style={{backgroundColor: "white"}}>
+                            <ul className="p-2 w-100 rounded" style={{backgroundColor: "white"}}>
                                 <h6>HTML</h6>
                                 <li className="" style={{listStyle: "none"}}>CSS</li>
                                 <li className="" style={{listStyle: "none"}}>SASS</li>
@@ -49,7 +49,7 @@ export default function Info()
                             </ul>     
                         </div>                        
                         <div className="p-2 m-1 d-flex" style={{width: "150px"}}>
-                            <ul className="p-2 w-100" style={{backgroundColor: "white"}}>
+                            <ul className="p-2 w-100 rounded" style={{backgroundColor: "white"}}>
                                 <h6>Banco de dados</h6>
                                 <li className="" style={{listStyle: "none"}}>Mysql</li>
                                 <li className="" style={{listStyle: "none"}}>SQL Server</li>

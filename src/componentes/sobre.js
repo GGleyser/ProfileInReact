@@ -5,21 +5,38 @@ import g2 from './../img/eu.jpeg';
 export default function Sobre()
 {
     return(
-    <div className="sobre container" id="sobre">
-        <div className="row my-5">
+    <div className="container" id="sobre">
+        <div className="d-inline-flex my-5 bg-dark rounded">
 
-            <div className="col-12 col-md-4">
+            <div className="col-12 col-md-4 p-2">
                 <img className="rounded-circle img-thumbnail perfil" src={g2}></img>
             </div>
 
-            <article className="col col-md-8">
-                <h2 className="sobre_titulo text-left"><strong>Sobre</strong></h2>
+            <article className="col p-2 rounded bg-light">
+                <h2 className="sobre_titulo text-left"><strong>Sobre mim</strong></h2>
+    
                     <p className="sobre_texto text-left my-3">
-                    Gabriel Gleyser Análista Desenvolvedor de Sistemas, 5 anos de experiência em fazer os bagulhos funcionarem 
-                    e desbugando sistemas;
-                    Já desenvolvi sites, jogos pra pc e um monte de poha que não coloquei no meu portfólio, esse sou eu. 
-                    Organização é minha maior qualidade.  
+                        Olá você! Vou contar um pouco sobre mim.
                     </p>
+
+                    <p className="sobre_texto text-left my-3">
+                        Talvez a palavra que me defina seja prático, pois eu dou um jeito de fazer as coisas 
+                            funcionarem.
+                    </p>
+                    <p className="sobre_texto text-left my-3">
+                        Sou apaixonado com assuntos de Eletrônica e programação são os assuntos 
+                            que mais me atraem e estou sempre aprendendo um pouco sobre elas.
+                        A idéia de criar meus próprios robôs é bem empolgante.
+                    </p>
+                    <p className="sobre_texto text-left my-3">
+                        Também gosto de jogar e de desenvolver jogos.
+                        Descobrir o fundamento do funcionamento das coisas também me fascina.
+                    </p>
+                    <p className="sobre_texto text-left my-3">
+                        É isso, agora você me conhece um pouco melhor. 
+                    </p>
+
+
                 <Icons class="sobre_icones text-left" />
             </article>
         </div>

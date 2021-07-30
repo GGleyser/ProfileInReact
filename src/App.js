@@ -22,10 +22,8 @@ export default function App()
       <div>
         <Nav />
       </div>
-
-      <div style={{height: "500px"}}></div>
       
-      <video className="w-100" src={Video} autoPlay="true" loop="true" muted="true" style={{zIndex: "-1", position: "fixed", top: "0", left: "0"}}></video>
+      <video className="" src={Video} autoPlay="true" loop="true" muted="true" style={{zIndex: "-1", position: "fixed", top: "0", left: "0"}}></video>
 
       <Info />
 
