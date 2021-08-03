@@ -13,7 +13,7 @@ export default function MyCarousel(props)
 {
     return (
        <div className="carousel slide bg-dark" data-ride="carousel">
-            <Carousel variant="dark" className="bg-dark" heigth="200">
+            <Carousel variant="dark" className="bg-dark" heigth="200" style={{width: "100%", height: "500px !important"}}>
                 <Carousel.Item>
                     <Depoimento img={Mina} txt="Ótimo profissional, muito prestativo e atencioso. Fez exatamente o que eu imaginava"/>
                 </Carousel.Item>

@@ -6,9 +6,9 @@ export default function Sobre()
 {
     return(
     <div className="container" id="sobre">
-        <div className="d-inline-flex my-5 bg-dark rounded">
+        <div className="d-flex flex-wrap my-5 rounded">
 
-            <div className="col-12 col-md-4 p-2">
+            <div className="col-12 col-md-4 p-2 align-items-center justify-content-center d-flex">
                 <img className="rounded-circle img-thumbnail perfil" src={g2}></img>
             </div>
 

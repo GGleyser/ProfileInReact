@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
 
 
 export default function Nav()
@@ -9,7 +10,7 @@ export default function Nav()
             <div className="container">
 
                 <a className="navbar-brand h1" href="#inicio">
-                    <text>GGleyser_dev</text>
+                    <span>GGleyser_dev</span>
                 </a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -17,22 +18,31 @@ export default function Nav()
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ml-auto">
+
                         <li className="nav-item active">
-                            <a className="nav-link btn h5" style={(Aactive == "inicio") ? {backgroundColor: "#000", color: "#fff"} : {} } 
-                            onClick={()=>{setstate("inicio")}} href="#inicio">Inicio</a>
+                            <Link className="nav-link btn h5" style={(Aactive == "inicio") ? 
+                            {backgroundColor: "#000", color: "#fff"} : {} } 
+                            onClick={()=>{setstate("inicio")}} href="/">Inicio</Link>
                         </li>
+                        
                         <li className="nav-item active">
-                            <a className="nav-link btn h5" style={(Aactive == "sobre") ? {backgroundColor: "#000", color: "#fff"} : {} } 
-                            onClick={()=>{setstate("sobre")}} href="#sobre">Sobre</a>
+                            <a className="nav-link btn h5" style={(Aactive == "sobre") ? 
+                            {backgroundColor: "#000", color: "#fff"} : {} } 
+                            onClick={()=>{setstate("sobre")}} href="/#sobre">Sobre</a>
                         </li>
+                        
                         <li className="nav-item active">
-                            <a className="nav-link btn h5" style={(Aactive == "orcamento") ? {backgroundColor: "#000", color: "#fff"} : {} } 
-                            onClick={()=>{setstate("orcamento")}} href="#orcamento">Orçamento</a>
+                            <a className="nav-link btn h5" style={(Aactive == "orcamento") ? 
+                            {backgroundColor: "#000", color: "#fff"} : {} } 
+                            onClick={()=>{setstate("orcamento")}} href="/#orcamento">Orçamento</a>
                         </li>
+                        
                         <li className="nav-item active">
-                            <a className="nav-link btn h5" style={(Aactive == "contato") ? {backgroundColor: "#000", color: "#fff"} : {} } 
-                            onClick={()=>{setstate("contato")}} href="#contato">Contato</a>
+                            <Link className="nav-link btn h5" style={(Aactive == "contato") ? 
+                            {backgroundColor: "#000", color: "#fff"} : {} } 
+                            onClick={()=>{setstate("contato")}} to="/contato">Contato</Link>
                         </li>
+
                     </ul>
                 </div>
 
