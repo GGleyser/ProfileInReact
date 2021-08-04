@@ -5,7 +5,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  useParams,
+  Redirect
 } from "react-router-dom";
 
 import Video from './../src/video/video.mp4';
@@ -20,6 +21,7 @@ import Footer from './componentes/footer';
 import Carousel from './componentes/carousel';
 import Orcamento from './componentes/orcamento';
 import Contato from './componentes/contato';
+import Projetos from './componentes/projetos';
 
 export default function App()
 {
@@ -47,20 +49,45 @@ export default function App()
 
         <Switch>
 
+            <Route exact path="/">
+              <Home />
+            </Route>
+            
             <Route path="/contato">
               <Contato />
+              <Footer /> 
             </Route>
 
-            <Route path="/">
-              <Home />
+            <Route path="/projetos">
+              <Projetos/>
+              <Footer/>
+            </Route>
+
+            <Route path="/projetos/:id" children={<Projetos/>}>
+              <Footer/>
             </Route>
 
             <Route path="*">
-              { ()=>{alert("Não encontrado")} }
+              <Redirect to={{pathname: "/"}}/>
             </Route>
 
         </Switch>
       </Router>
     </div>
   )
+}
+
+
+function Child() {
+  // We can use the `useParams` hook here to access
+  // the dynamic pieces of the URL.
+  let { id } = useParams();
+  if(id != "CTe"){
+    return;
+  }
+  return (
+    <div>
+      <h3>ID: {id}</h3>
+    </div>
+  );
 }

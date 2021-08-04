@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Card(props)
 {
@@ -11,7 +12,8 @@ export default function Card(props)
             <div className="card-body">
                 <h2 className="card-title">{props.title}</h2>
                 <p className="card-text">{props.text}</p>
-                <a className="btn btn-dark w-100 h4" style={{ backgroundColor: "#000" }} href={props.btnLink}>{props.btnTxt}</a>
+                <Link className="btn btn-dark w-100 h4" style={{ backgroundColor: "#000" }} 
+                    to={props.btnLink}>{props.btnTxt}</Link>
             </div>
         </div>
     );

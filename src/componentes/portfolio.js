@@ -1,4 +1,5 @@
 import React, { Children } from 'react';
+import { Link } from 'react-router-dom';
 import Card from '../componentes/card';
 import Mountain from '../img/mountain.jpeg';
 
@@ -13,15 +14,15 @@ export default function Portfolio(props)
           {/* cards */}
           <div className="row">
             <Card 
-              img={Mountain} OnFocus={()=> {alert("focus1")}} btnTxt="Acessar" btnLink="#test" title="Projeto" 
+              img={Mountain} OnFocus={()=> {alert("focus1")}} btnTxt="Acessar" btnLink="/projetos/rs" title="Projeto" 
               text="RSVestuário. Loja de roupas unisex."
             />
             <Card
-              img={Mountain} OnFocus={()=> {alert("focus2")}} btnTxt="Acessar" btnLink="#test" title="Projeto"
+              img={Mountain} OnFocus={()=> {alert("focus2")}} btnTxt="Acessar" btnLink="/projetos/CTe" title="Projeto"
               text="CTe. Aplicação de controle de notas fiscais."
             />
             <Card
-              img={Mountain} OnFocus={()=> {alert("focus3")}} btnTxt="Acessar" btnLink="#test" title="Projeto"
+              img={Mountain} OnFocus={()=> {alert("focus3")}} btnTxt="Acessar" btnLink="/projeto/Sys" title="Projeto"
               text="Syschool, projeto de uma instituição de ensino."
             />
           </div>
@@ -29,7 +30,7 @@ export default function Portfolio(props)
 
 
           <div className="row py-5 m-auto" style={{ width: 18 + 'rem' }}>
-            <a className="w-100 h4 p-1 btn text-white" style={{backgroundColor: "#000"}} href="#projetos/">Ver todos</a>
+            <Link className="w-100 h4 p-1 btn text-white" style={{backgroundColor: "#000"}} to="/projetos">Ver todos</Link>
           </div>
 
         </div>

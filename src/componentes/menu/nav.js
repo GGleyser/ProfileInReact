@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 
 export default function Nav()
 {
-    const [Aactive, setstate] = useState("inicio")
+    const [Aactive, setstate] = useState("")
+    const linkStyle = {backgroundColor: "#000", color: "#fff"};
     return(
         <nav className="navbar navbar-expand-lg navbar-light py-3" style={{ backgroundColor: "rgb(218 218 218)"}}>
             <div className="container">
@@ -20,26 +21,22 @@ export default function Nav()
                     <ul className="navbar-nav ml-auto">
 
                         <li className="nav-item active">
-                            <Link className="nav-link btn h5" style={(Aactive == "inicio") ? 
-                            {backgroundColor: "#000", color: "#fff"} : {} } 
-                            onClick={()=>{setstate("inicio")}} href="/">Inicio</Link>
+                            <Link className="nav-link btn h5" style={(Aactive == "inicio") ? linkStyle : {} } 
+                            onClick={()=>{setstate("inicio")}} to="/">Inicio</Link>
                         </li>
                         
                         <li className="nav-item active">
-                            <a className="nav-link btn h5" style={(Aactive == "sobre") ? 
-                            {backgroundColor: "#000", color: "#fff"} : {} } 
+                            <a className="nav-link btn h5" style={(Aactive == "sobre") ? linkStyle: {} } 
                             onClick={()=>{setstate("sobre")}} href="/#sobre">Sobre</a>
                         </li>
                         
                         <li className="nav-item active">
-                            <a className="nav-link btn h5" style={(Aactive == "orcamento") ? 
-                            {backgroundColor: "#000", color: "#fff"} : {} } 
+                            <a className="nav-link btn h5" style={(Aactive == "orcamento") ? linkStyle : {} } 
                             onClick={()=>{setstate("orcamento")}} href="/#orcamento">Orçamento</a>
                         </li>
                         
                         <li className="nav-item active">
-                            <Link className="nav-link btn h5" style={(Aactive == "contato") ? 
-                            {backgroundColor: "#000", color: "#fff"} : {} } 
+                            <Link className="nav-link btn h5" style={(Aactive == "contato") ? linkStyle: {} } 
                             onClick={()=>{setstate("contato")}} to="/contato">Contato</Link>
                         </li>
 
