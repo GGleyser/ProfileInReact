@@ -1,14 +1,31 @@
 import React from 'react';
-import { useParams } from 'react-router';
 
 export default function Projetos(props)
 {
-  let { id } = useParams();
-  if(id != "CTe"){  }
+  let id = props.match.params.nome;
 
   return (
     <div>
-      <h3>ID: {id}</h3>
+      {id == undefined ? <AllProjetos/> : <IdProjeto id={id}/>}
     </div>
+  );
+}
+
+const IdProjeto = (props) =>{
+  return(
+    <h3>Projeto id: {props.id}</h3>
+  );
+}
+
+const AllProjetos = () =>{
+  return(
+    <>
+      <h3>Projetos:</h3>
+      <ul>
+        <li>CTe</li>
+        <li>Sys</li>
+        <li>RS</li>
+      </ul>
+    </>
   );
 }

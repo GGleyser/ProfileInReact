@@ -22,7 +22,7 @@ export default function Portfolio(props)
               text="CTe. Aplicação de controle de notas fiscais."
             />
             <Card
-              img={Mountain} OnFocus={()=> {alert("focus3")}} btnTxt="Acessar" btnLink="/projeto/Sys" title="Projeto"
+              img={Mountain} OnFocus={()=> {alert("focus3")}} btnTxt="Acessar" btnLink="/projetos/Sys" title="Projeto"
               text="Syschool, projeto de uma instituição de ensino."
             />
           </div>
@@ -30,7 +30,7 @@ export default function Portfolio(props)
 
 
           <div className="row py-5 m-auto" style={{ width: 18 + 'rem' }}>
-            <Link className="w-100 h4 p-1 btn text-white" style={{backgroundColor: "#000"}} to="/projetos">Ver todos</Link>
+            <Link className="w-100 h4 p-1 btn text-white" style={{backgroundColor: "#000"}} to="/projetos/">Ver todos</Link>
           </div>
 
         </div>

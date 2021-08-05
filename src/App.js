@@ -58,13 +58,12 @@ export default function App()
               <Footer /> 
             </Route>
 
-            <Route path="/projetos">
-              <Projetos/>
-              <Footer/>
+            <Route path="/projetos/:nome" component={Projetos}>
+              <Footer /> 
             </Route>
 
-            <Route path="/projetos/:id" children={<Projetos/>}>
-              <Footer/>
+            <Route path="/projetos/" component={Projetos}>
+              <Footer /> 
             </Route>
 
             <Route path="*">
@@ -75,19 +74,4 @@ export default function App()
       </Router>
     </div>
   )
-}
-
-
-function Child() {
-  // We can use the `useParams` hook here to access
-  // the dynamic pieces of the URL.
-  let { id } = useParams();
-  if(id != "CTe"){
-    return;
-  }
-  return (
-    <div>
-      <h3>ID: {id}</h3>
-    </div>
-  );
 }
